@@ -43,9 +43,9 @@ export default function CameraComponente(props) {
         setLocation(actualLocation.coords);
         
         if (errorMsg) {
-        text = errorMsg;
+            text = errorMsg;
         } else if (location) {
-        text = JSON.stringify(location);
+            text = JSON.stringify(location);
         }
     }
 
@@ -61,8 +61,7 @@ export default function CameraComponente(props) {
           const data =  await ref.current.takePictureAsync(opt);
           await MediaLibrary.saveToLibraryAsync(data.uri);
           setCaptured(data.uri);
-          setOpen(true);
-          console.log(location)
+          setOpen(true)
         }
     }
 
